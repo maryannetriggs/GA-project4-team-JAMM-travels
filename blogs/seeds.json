@@ -1,0 +1,44 @@
+[
+  {
+    "model": "blogs.tag",
+    "pk": 1,
+    "fields": {
+    "tag": "Europe"
+  }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 2,
+    "fields": {
+    "tag": "With Children"
+  }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 3,
+    "fields": {
+    "tag": "Weekend Break"
+  }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 4,
+    "fields": {
+    "tag": "Oceania"
+  }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 5,
+    "fields": {
+    "tag": "USA"
+  }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 6,
+    "fields": {
+    "tag": "Without Children"
+  }
+  }
+]
