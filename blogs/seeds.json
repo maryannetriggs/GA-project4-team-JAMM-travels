@@ -1,46 +1,174 @@
 [
-{
-  "model": "blogs.tag",
-  "pk": 1,
-  "fields": {
-    "tag": "Europe"
-  }
-},
-{
-  "model": "blogs.tag",
-  "pk": 2,
-  "fields": {
-    "tag": "With Children"
-  }
-},
-{
-  "model": "blogs.tag",
-  "pk": 3,
-  "fields": {
-    "tag": "Weekend Break"
-  }
-},
-{
-  "model": "blogs.tag",
-  "pk": 4,
-  "fields": {
-    "tag": "Oceania"
-  }
-},
-{
-  "model": "blogs.tag",
-  "pk": 5,
-  "fields": {
-    "tag": "USA"
-  }
-},
-{
-  "model": "blogs.tag",
-  "pk": 6,
-  "fields": {
-    "tag": "Without Children"
-  }
-},
+  {
+    "model": "blogs.tag",
+    "pk": 1,
+    "fields": {
+      "tag": "Spring"
+    }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 2,
+    "fields": {
+      "tag": "Summer"
+    }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 3,
+    "fields": {
+      "tag": "Autumn"
+    }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 4,
+    "fields": {
+      "tag": "Winter"
+    }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 5,
+    "fields": {
+      "tag": "Without Children"
+    }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 6,
+    "fields": {
+      "tag": "With Children"
+    }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 7,
+    "fields": {
+      "tag": "Weekend Break"
+    }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 8,
+    "fields": {
+      "tag": "Short Break"
+    }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 9,
+    "fields": {
+      "tag": "Long Break"
+    }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 10,
+    "fields": {
+      "tag": "UK"
+    }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 11,
+    "fields": {
+      "tag": "New Zealand"
+    }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 12,
+    "fields": {
+      "tag": "USA"
+    }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 13,
+    "fields": {
+      "tag": "Europe"
+    }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 14,
+    "fields": {
+      "tag": "Oceania"
+    }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 15,
+    "fields": {
+      "tag": "Asia"
+    }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 16,
+    "fields": {
+      "tag": "Beach"
+    }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 17,
+    "fields": {
+      "tag": "Outdoors"
+    }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 18,
+    "fields": {
+      "tag": "Adventure"
+    }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 19,
+    "fields": {
+      "tag": "Culture"
+    }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 20,
+    "fields": {
+      "tag": "Food and Drink"
+    }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 21,
+    "fields": {
+      "tag": "Luxury"
+    }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 22,
+    "fields": {
+      "tag": "Romantic"
+    }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 23,
+    "fields": {
+      "tag": "Wellness"
+    }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 24,
+    "fields": {
+      "tag": "Road Trip"
+    }
+  },
+
+
 {
   "model": "blogs.blog",
   "pk": 1,
@@ -51,9 +179,10 @@
     "date_published": "2019-11-13",
     "story": "Alllllllll the bloggy goodness",
     "tags": [
-      1,
-      2,
-      3
+      6,
+      7,
+      13,
+      19
     ]
   }
 }
