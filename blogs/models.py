@@ -1,11 +1,14 @@
 from django.db import models
+from django.contrib.auth import get_user_model
+from PIL import Image
+User = get_user_model()
 
 # Create your models here.
 
 # class Comment(models.Model):
 
 class Tag(models.Model):
-    tag = models.CharField(max_length=30)
+    tag = models.CharField(max_length=30, unique=True)
 
     def __str__(self):
         return f'{self.tag}'
@@ -15,13 +18,41 @@ class Blog(models.Model):
     subtitle = models.CharField(max_length=200)
     author = models.CharField(max_length=50)
     date_published = models.DateField(auto_now=False)
-    images = models.CharField(max_length=200)
     story = models.CharField(max_length=50)
     tags = models.ManyToManyField(
         Tag,
-        related_name='blogs',
-        blank=True
-    )
+        related_name='blogs'
+        )
 
     def __str__(self):
         return f'{self.title}'
+
+class BlogImage(models.Model):
+    blog = models.ForeignKey(
+        Blog,
+        related_name='images',
+        on_delete=models.DO_NOTHING
+    )
+    image = models.ImageField()
+    
+    def __str__(self):
+        return f'{self.image}'
+
+class Comment(models.Model):
+    blog = models.ForeignKey(
+        Blog,
+        related_name='comments',
+        on_delete=models.DO_NOTHING
+    )
+    comment = models.CharField(max_length=255)
+    date = models.DateField(auto_now=True)
+    # author = models.ForeignKey(
+    #     User,
+    #     related_name='author',
+    #     on_delete=models.CASCADE
+    # )
+
+    def __str__(self):
+        return f'{self.comment}'
+
+

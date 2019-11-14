@@ -1,11 +1,24 @@
-from django.shortcuts import render
-from django.views import View
+from rest_framework.views import APIView
+from rest_framework.response import Response
+
+from .models import Blog
+from .serializers import BlogSerializer
 
 # Create your views here.
 
-class ListView(View):
+class ListView(APIView):
 
-    def get(self, request):
+    def get(self, _request):
         blogs = Blog.objects.all()
+        serializer = BlogSerializer(blogs, many=True)
 
-        return render(request, 'index.html', {'blogs': blogs})
+        return Response(serializer.data)
+
+
+class DetailView(APIView):
+
+    def get(self, _request, pk):
+        blog = Blog.objects.get(pk=pk)
+        serializer = BlogSerializer(blog)
+
+        return Response(serializer.data)
