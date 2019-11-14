@@ -45,124 +45,131 @@
     "model": "blogs.tag",
     "pk": 7,
     "fields": {
-      "tag": "Weekend Break"
+      "tag": "Day Trip"
     }
   },
   {
     "model": "blogs.tag",
     "pk": 8,
     "fields": {
-      "tag": "Short Break"
+      "tag": "Weekend Break"
     }
   },
   {
     "model": "blogs.tag",
     "pk": 9,
     "fields": {
-      "tag": "Long Break"
+      "tag": "Short Break"
     }
   },
   {
     "model": "blogs.tag",
     "pk": 10,
     "fields": {
-      "tag": "UK"
+      "tag": "Long Break"
     }
   },
   {
     "model": "blogs.tag",
     "pk": 11,
     "fields": {
-      "tag": "New Zealand"
+      "tag": "UK"
     }
   },
   {
     "model": "blogs.tag",
     "pk": 12,
     "fields": {
-      "tag": "USA"
+      "tag": "New Zealand"
     }
   },
   {
     "model": "blogs.tag",
     "pk": 13,
     "fields": {
-      "tag": "Europe"
+      "tag": "USA"
     }
   },
   {
     "model": "blogs.tag",
     "pk": 14,
     "fields": {
-      "tag": "Oceania"
+      "tag": "Europe"
     }
   },
   {
     "model": "blogs.tag",
     "pk": 15,
     "fields": {
-      "tag": "Asia"
+      "tag": "Oceania"
     }
   },
   {
     "model": "blogs.tag",
     "pk": 16,
     "fields": {
-      "tag": "Beach"
+      "tag": "Asia"
     }
   },
   {
     "model": "blogs.tag",
     "pk": 17,
     "fields": {
-      "tag": "Outdoors"
+      "tag": "Beach"
     }
   },
   {
     "model": "blogs.tag",
     "pk": 18,
     "fields": {
-      "tag": "Adventure"
+      "tag": "Outdoors"
     }
   },
   {
     "model": "blogs.tag",
     "pk": 19,
     "fields": {
-      "tag": "Culture"
+      "tag": "Adventure"
     }
   },
   {
     "model": "blogs.tag",
     "pk": 20,
     "fields": {
-      "tag": "Food and Drink"
+      "tag": "Culture"
     }
   },
   {
     "model": "blogs.tag",
     "pk": 21,
     "fields": {
-      "tag": "Luxury"
+      "tag": "Food and Drink"
     }
   },
   {
     "model": "blogs.tag",
     "pk": 22,
     "fields": {
-      "tag": "Romantic"
+      "tag": "Luxury"
     }
   },
   {
     "model": "blogs.tag",
     "pk": 23,
     "fields": {
-      "tag": "Wellness"
+      "tag": "Romantic"
     }
   },
   {
     "model": "blogs.tag",
     "pk": 24,
+    "fields": {
+      "tag": "Wellness"
+    }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 25,
     "fields": {
       "tag": "Road Trip"
     }
@@ -180,9 +187,9 @@
     "story": "Alllllllll the bloggy goodness",
     "tags": [
       6,
-      7,
-      13,
-      19
+      8,
+      14,
+      20
     ]
   }
 }

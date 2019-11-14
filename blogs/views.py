@@ -1,5 +1,5 @@
 # pylint: disable=no-member
-from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView, ListAPIView, RetrieveAPIView
+from rest_framework.generics import CreateAPIView, ListCreateAPIView, RetrieveUpdateDestroyAPIView, ListAPIView, RetrieveAPIView
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from .models import Blog, Tag, BlogImage, Comment
 from .serializers import BlogSerializer, TagSerializer, BlogImageSerializer, CommentSerializer

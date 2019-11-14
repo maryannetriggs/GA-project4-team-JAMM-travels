@@ -51,25 +51,29 @@ class BlogImageSerializer(serializers.ModelSerializer):
 
 class BlogSerializer(serializers.ModelSerializer):
 
+    tags = NestedTagSerializer(many=True)
     images = NestedBlogImageSerializer(many=True)
     comments = NestedCommentSerializer(many=True)
-    tags = NestedTagSerializer(many=True)
 
     def create(self, data):
-        tag_data = data.pop('tag')
-        image_data = data.pop('image')
+        tags_data = data.pop('tags')
+        images_data = data.pop('images')
+        comments_data = data.pop('comments')
 
         blog = Blog(**data)
-        blog.tag = [Tag.objects.get(**tag_data) for tag_data in tags_data]
-        blog.image = [Image.objects.get(**image_data) for image_data in images_data]
+        tags = [Tag.objects.get(**tag_data) for tag_data in tags_data]
+        images = [Image.objects.get(**image_data) for image_data in images_data]
+        comments = [Comment.objects.get(**comment_data) for comment_data in comments_data]
         blog.save()
         blog.tags.set(tags)
         blog.images.set(images)
+        blog.comments.set(comments)
         return blog
 
     def update(self, blog, data):
-        tag_data = data.pop('tag')
-        image_data = data.pop('image')
+        tags_data = data.pop('tags')
+        images_data = data.pop('images')
+        comments_data = data.pop('comments')
 
         blog.title = data.get('title', blog.title)
         blog.subtitle = data.get('subtitle', blog.subtitle)
@@ -77,12 +81,14 @@ class BlogSerializer(serializers.ModelSerializer):
         blog.date_published = data.get('date_published', blog.date_published)
         blog.story = data.get('story', blog.story)
 
-        tags = [tag.objects.get(**tag_data) for tag_data in tags_data]
-        images = [image.objects.get(**image_data) for image_data in images_data]
+        tags = [Tag.objects.get(**tag_data) for tag_data in tags_data]
+        images = [Image.objects.get(**image_data) for image_data in images_data]
+        comments = [Comment.objects.get(**comment_data) for comment_data in comments_data]
 
         blog.save()
         blog.tags.set(tags)
         blog.images.set(images)
+        blog.comments.set(comments)
         return blog
 
     class Meta:
