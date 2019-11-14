@@ -1,6 +1,12 @@
 from rest_framework import serializers
 from .models import Blog, BlogImage, Comment, Tag
 
+class NestedBlogSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = BlogImage
+        fields = ('id', 'title', 'subtitle', 'author', 'date_published', 'story')
+
 class NestedBlogImageSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -18,6 +24,22 @@ class NestedCommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
         fields = ('id', 'comment', 'date')
+
+class TagSerializer(serializers.ModelSerializer):
+
+    blogs = NestedBlogSerializer(many=True)
+    class Meta:
+        model = Tag
+        fields = ('id', 'tag', 'blogs')
+
+
+class BlogImageSerializer(serializers.ModelSerializer):
+
+    blogs = NestedBlogSerializer(many=True)
+    class Meta:
+
+        model = BlogImage
+        fields = ('id', 'image', 'blogs')
 
 class BlogSerializer(serializers.ModelSerializer):
 

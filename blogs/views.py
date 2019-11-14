@@ -1,24 +1,32 @@
-from rest_framework.views import APIView
-from rest_framework.response import Response
-
-from .models import Blog
-from .serializers import BlogSerializer
+# pylint: disable=no-member
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView, ListAPIView, RetrieveAPIView
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from .models import Blog, Tag, BlogImage
+from .serializers import BlogSerializer, TagSerializer, BlogImageSerializer
 
 # Create your views here.
+class BlogListView(ListCreateAPIView):
+    permission_classes = (IsAuthenticatedOrReadOnly, )
+    queryset = Blog.objects.all()
+    serializer_class = BlogSerializer
 
-class ListView(APIView):
+class BlogDetailView(RetrieveUpdateDestroyAPIView):
+    permission_classes = (IsAuthenticatedOrReadOnly, )
+    queryset = Blog.objects.all()
+    serializer_class = BlogSerializer
 
-    def get(self, _request):
-        blogs = Blog.objects.all()
-        serializer = BlogSerializer(blogs, many=True)
+class TagListView(ListAPIView):
+    queryset = Tag.objects.all()
+    serializer_class = TagSerializer
 
-        return Response(serializer.data)
+class TagDetailView(RetrieveAPIView):
+    queryset = Tag.objects.all()
+    serializer_class = TagSerializer
 
+class BlogImageListView(ListAPIView):
+    queryset = BlogImage.objects.all()
+    serializer_class = BlogImageSerializer
 
-class DetailView(APIView):
-
-    def get(self, _request, pk):
-        blog = Blog.objects.get(pk=pk)
-        serializer = BlogSerializer(blog)
-
-        return Response(serializer.data)
+class BlogImageDetailView(RetrieveAPIView):
+    queryset = BlogImage.objects.all()
+    serializer_class = BlogImageSerializer
