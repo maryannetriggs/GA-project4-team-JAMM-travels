@@ -4,7 +4,7 @@ from .models import Blog, BlogImage, Comment, Tag
 class NestedBlogSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = BlogImage
+        model = Blog
         fields = ('id', 'title', 'subtitle', 'author', 'date_published', 'story')
 
 class NestedBlogImageSerializer(serializers.ModelSerializer):
@@ -28,6 +28,7 @@ class NestedCommentSerializer(serializers.ModelSerializer):
 class TagSerializer(serializers.ModelSerializer):
 
     blogs = NestedBlogSerializer(many=True)
+
     class Meta:
         model = Tag
         fields = ('id', 'tag', 'blogs')
@@ -36,8 +37,8 @@ class TagSerializer(serializers.ModelSerializer):
 class BlogImageSerializer(serializers.ModelSerializer):
 
     blogs = NestedBlogSerializer(many=True)
-    class Meta:
 
+    class Meta:
         model = BlogImage
         fields = ('id', 'image', 'blogs')
 
