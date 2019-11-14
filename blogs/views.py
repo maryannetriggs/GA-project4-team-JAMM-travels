@@ -1,8 +1,8 @@
 # pylint: disable=no-member
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView, ListAPIView, RetrieveAPIView
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
-from .models import Blog, Tag, BlogImage
-from .serializers import BlogSerializer, TagSerializer, BlogImageSerializer
+from .models import Blog, Tag, BlogImage, Comment
+from .serializers import BlogSerializer, TagSerializer, BlogImageSerializer, CommentSerializer
 
 # Create your views here.
 class BlogListView(ListCreateAPIView):
@@ -30,3 +30,11 @@ class BlogImageListView(ListAPIView):
 class BlogImageDetailView(RetrieveAPIView):
     queryset = BlogImage.objects.all()
     serializer_class = BlogImageSerializer
+
+class CommentListView(ListAPIView):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer
+
+class CommentDetailView(RetrieveAPIView):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer

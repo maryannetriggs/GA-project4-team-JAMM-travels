@@ -33,6 +33,13 @@ class TagSerializer(serializers.ModelSerializer):
         model = Tag
         fields = ('id', 'tag', 'blogs')
 
+class CommentSerializer(serializers.ModelSerializer):
+
+    blogs = NestedBlogSerializer(many=True)
+
+    class Meta:
+        model = Comment
+        fields = ('id', 'comment', 'blogs')
 
 class BlogImageSerializer(serializers.ModelSerializer):
 
@@ -50,15 +57,19 @@ class BlogSerializer(serializers.ModelSerializer):
 
     def create(self, data):
         tag_data = data.pop('tag')
+        image_data = data.pop('image')
 
         blog = Blog(**data)
         blog.tag = [Tag.objects.get(**tag_data) for tag_data in tags_data]
+        blog.image = [Image.objects.get(**image_data) for image_data in images_data]
         blog.save()
         blog.tags.set(tags)
+        blog.images.set(images)
         return blog
 
     def update(self, blog, data):
         tag_data = data.pop('tag')
+        image_data = data.pop('image')
 
         blog.title = data.get('title', blog.title)
         blog.subtitle = data.get('subtitle', blog.subtitle)
@@ -67,9 +78,11 @@ class BlogSerializer(serializers.ModelSerializer):
         blog.story = data.get('story', blog.story)
 
         tags = [tag.objects.get(**tag_data) for tag_data in tags_data]
+        images = [image.objects.get(**image_data) for image_data in images_data]
 
         blog.save()
         blog.tags.set(tags)
+        blog.images.set(images)
         return blog
 
     class Meta:
