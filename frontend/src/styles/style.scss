@@ -1,5 +1,3 @@
-@import 'register-and-login';
-
 // Default Colour Schemes
 
 $highlight-colour: #48A69C;
@@ -11,9 +9,9 @@ $redtone-colour: #C58464;
   box-sizing: border-box;
 }
 
-// 
-
-// Centre Class
+body, html {
+  height: 100vh;
+}
 
 .centre {
   display: flex;
@@ -21,8 +19,14 @@ $redtone-colour: #C58464;
   align-items: center;
 }
 
+// INDIVIDUAL PAGE STYLES
 
+// Navbar Styles
+@import 'navbar';
+
+// Home Page Styles
+@import 'home';
 
 // Register and Login Page Styles
-
+@import 'register-and-login';
 

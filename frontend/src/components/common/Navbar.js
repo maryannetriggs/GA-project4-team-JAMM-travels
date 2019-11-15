@@ -3,10 +3,11 @@ import { Link, withRouter } from 'react-router-dom'
 
 const Navbar = () => (
   <nav>
-    <Link to="/">Home</Link>
+    <Link className="centre logo" to="/">Team JAMM Travels</Link>
     <Link to="/blogs">See All The Blogs</Link>
     <Link to="/login">Log In</Link>
     <Link to="/register">Register</Link>
+    
   </nav>
 )
 
