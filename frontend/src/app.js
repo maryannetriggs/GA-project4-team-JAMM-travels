@@ -16,12 +16,14 @@ import BlogsIndex from './components/blogs/BlogsIndex'
 const App = () => (
   <BrowserRouter>
     <Navbar/>
-    <Switch>
-      <Route exact path="/" component={Home}/>
-      <Route path="/blogs" component={BlogsIndex}/>
-      <Route path="/login" component={Login}/>
-      <Route path="/register" component={Register}/>
-    </Switch>
+    <main>
+      <Switch>
+        <Route exact path="/" component={Home}/>
+        <Route path="/blogs" component={BlogsIndex}/>
+        <Route path="/login" component={Login}/>
+        <Route path="/register" component={Register}/>
+      </Switch>
+    </main>
   </BrowserRouter>
 )
 

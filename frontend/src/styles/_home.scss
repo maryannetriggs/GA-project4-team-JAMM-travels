@@ -10,9 +10,29 @@
   background-size: cover;
 }
 
-.mid-parallax {
-  height: 300px;
-  background-color :lightgray;
+.midParallax {
+  background-color:white;
   font-size: 36px;
 }
 
+p {
+  font-size: 12px;
+}
+
+section {
+  background-color: #edecec;
+
+}
+
+.mainBlogIndex {
+  display: flex;
+
+  div {
+    margin: 20px;
+  }
+
+  img {
+    height: 500px;
+    width: auto;
+  }
+}

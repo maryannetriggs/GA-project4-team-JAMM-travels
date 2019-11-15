@@ -1,3 +1,10 @@
-.logo {
-  font-family: cursive;
+.navbar {
+  position: fixed;
+  top: 0;
+}
+
+span {
+  font-family: 'Qwigley', cursive;
+  font-size: 70px;
+  display: inline-block;
 }
