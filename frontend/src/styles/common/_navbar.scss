@@ -1,0 +1,18 @@
+.stickyNavbar {
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  z-index: 2;
+}
+
+span {
+  font-family: 'Qwigley', cursive;
+  font-size: 70px;
+  display: inline-block;
+}
+
+.navbar a {
+  padding: 10px;
+}

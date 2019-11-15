@@ -25,12 +25,13 @@ main {
 
 // INDIVIDUAL PAGE STYLES
 
-// Navbar Styles
-@import 'navbar';
+// Navbar and Footer Styles
+@import './common/navbar';
+@import './common/footer';
 
 // Home Page Styles
 @import 'home';
 
 // Register and Login Page Styles
-@import 'register-and-login';
+@import './auth/register-and-login';
 
