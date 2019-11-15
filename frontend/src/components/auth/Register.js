@@ -7,7 +7,7 @@ const Register = () => (
     <form className="centre">
       <div className="formBackground form-group">
         <div className="form-group">
-          <label className="form-label" htmlFor="name">Name</label>
+          <label className="form-label">Name</label>
           <input
             className="form-input"
             type="text"
@@ -15,7 +15,7 @@ const Register = () => (
             name="name"
             placeholder="Name"
           />
-          <label>Profile Picture</label>
+          <label className="form-label">Profile Picture</label>
           <input
             className="form-input"
             type="text"
@@ -23,7 +23,7 @@ const Register = () => (
             name="profilePicture"
             placeholder="Profile Picture (URL)"
           />
-          <label>Country of Residence</label>
+          <label className="form-label">Country of Residence</label>
           <input
             className="form-input"
             type="text"
@@ -31,7 +31,7 @@ const Register = () => (
             name="country"
             placeholder="Country of Residence"
           />
-          <label className="form-label" htmlFor="email">Email</label>
+          <label className="form-label">Email</label>
           <input
             className="form-input"
             name="email"
@@ -39,7 +39,7 @@ const Register = () => (
             id="email"
             placeholder="Email" 
           />
-          <label className="form-label" htmlFor="password">Password</label>
+          <label className="form-label">Password</label>
           <input
             className="form-input"
             name="password"
@@ -47,7 +47,7 @@ const Register = () => (
             id="password"
             placeholder="Password" 
           />
-          <label>Password Confirmation</label>
+          <label className="form-label">Password Confirmation</label>
           <input
             className="form-input"
             type="password"
@@ -57,10 +57,12 @@ const Register = () => (
           />
           <br />
           <button className="btn" type="submit">Register</button>
+          <br />
         </div>
-        <small>Already have an account? <Link to="/login">Log In</Link></small>
+        <small>Already have an account?<Link to="/login">Log In</Link></small>
       </div>
     </form>
+    <h1>Ya</h1>
   </section>
 )
     
