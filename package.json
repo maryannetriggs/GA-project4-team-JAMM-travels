@@ -27,6 +27,10 @@
   },
   "dependencies": {
     "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react-dom": "^16.7.0",
+    "react-router-dom": "^5.1.2",
+    "react-select": "^3.0.8",
+    "spectre": "^0.0.1",
+    "spectre.css": "^0.5.8"
   }
 }

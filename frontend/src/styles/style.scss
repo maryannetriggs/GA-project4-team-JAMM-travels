@@ -1,0 +1,28 @@
+@import 'register-and-login';
+
+// Default Colour Schemes
+
+$highlight-colour: #48A69C;
+$redtone-colour: #C58464;
+
+// Universal Schemes
+
+* {
+  box-sizing: border-box;
+}
+
+// 
+
+// Centre Class
+
+.centre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+// Register and Login Page Styles
+
+

@@ -1,0 +1,13 @@
+$redtone-colour: #C58464;
+
+.formBackground {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px 1px 10px $redtone-colour;
+  
+  width: 500px;
+  height: 600px;
+}
