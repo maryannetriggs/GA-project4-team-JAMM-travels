@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100vh;
+}
+
+main {
+  margin-top: 100px;
+}
+
+.centre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a, a:hover {
+  text-decoration: none;
+}

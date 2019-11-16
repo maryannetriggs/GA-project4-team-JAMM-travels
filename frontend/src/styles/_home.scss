@@ -27,13 +27,23 @@ section {
 .mainBlogIndex {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 
   div {
     margin: 20px;
   }
+}
 
-  img {
-    height: 500px;
-    width: auto;
+.featuredBlogs {
+  flex-direction: row;
+  justify-content: space-around;
+
+  div {
+    padding: 10px;
+
+    img {
+      height: 100px;
+      width: 100px;
+    }
   }
 }

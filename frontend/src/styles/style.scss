@@ -4,24 +4,7 @@ $highlight-colour: #48A69C;
 $redtone-colour: #C58464;
 
 // Universal Schemes
-
-* {
-  box-sizing: border-box;
-}
-
-body, html {
-  height: 100vh;
-}
-
-main {
-  margin-top: 100px;
-}
-
-.centre {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+@import './common/universal.scss';
 
 // INDIVIDUAL PAGE STYLES
 
@@ -29,9 +12,11 @@ main {
 @import './common/navbar';
 @import './common/footer';
 
-// Home Page Styles
-@import 'home';
-
 // Register and Login Page Styles
 @import './auth/register-and-login';
 
+// Home Page Styles
+@import 'home';
+
+// Blog Related Styles
+@import './blog/blogcard';

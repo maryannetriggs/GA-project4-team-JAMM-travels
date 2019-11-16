@@ -33,7 +33,9 @@ class BlogImage(models.Model):
         related_name='images',
         on_delete=models.DO_NOTHING
     )
-    image = models.ImageField()
+    image = models.ImageField(
+        upload_to='images/'
+    )
     
     def __str__(self):
         return f'{self.image}'
