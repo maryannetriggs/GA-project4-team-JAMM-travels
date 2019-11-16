@@ -41,18 +41,18 @@ class BlogImage(models.Model):
         return f'{self.image}'
 
 class Comment(models.Model):
+    author = models.ForeignKey(
+        User,
+        related_name='comments',
+        on_delete=models.CASCADE
+    )
     blog = models.ForeignKey(
         Blog,
         related_name='comments',
-        on_delete=models.DO_NOTHING
+        on_delete=models.CASCADE
     )
     comment = models.CharField(max_length=255)
     date = models.DateField(auto_now=True)
-    # author = models.ForeignKey(
-    #     User,
-    #     related_name='author',
-    #     on_delete=models.CASCADE
-    # )
 
     def __str__(self):
         return f'{self.comment}'
