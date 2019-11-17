@@ -4,8 +4,8 @@ from rest_framework.generics import CreateAPIView, ListCreateAPIView, RetrieveUp
 from rest_framework.permissions import IsAdminUser, IsAuthenticated, SAFE_METHODS
 from rest_framework.views import APIView
 from rest_framework.status import HTTP_201_CREATED, HTTP_401_UNAUTHORIZED, HTTP_422_UNPROCESSABLE_ENTITY, HTTP_204_NO_CONTENT 
-from .models import Blog, Tag, BlogImage, Comment
-from .serializers import BlogSerializer, CommentSerializer, PopulatedBlogSerializer
+from .models import Blog, BlogImage, Comment, Tag
+from .serializers import BlogSerializer, BlogImageSerializer, CommentSerializer, PopulatedBlogSerializer, TagSerializer
 
 class IsAdminUserOrReadOnly(IsAdminUser):
 
@@ -52,6 +52,26 @@ class BlogDetailView(APIView):
         blog.delete()
         return Response(status=HTTP_204_NO_CONTENT)
 
+class BlogImageListView(APIView):
+
+    permission_classes = (IsAdminUserOrReadOnly, )
+
+    def post(self, request):
+        image = BlogImageSerializer(data=request.data)
+        if image.is_valid():
+            image.save()
+            return Response(image.data, status=HTTP_201_CREATED)
+        return Response(image.errors, status=HTTP_422_UNPROCESSABLE_ENTITY)
+
+class BlogImageDetailView(APIView):
+
+    permission_classes = (IsAdminUserOrReadOnly, )
+
+    def delete(self, _request, pk):
+        image = BlogImage.objects.get(pk=pk)
+        image.delete()
+        return Response(status=HTTP_204_NO_CONTENT)
+
 class CommentListView(APIView):
 
     permission_classes = (IsAuthenticated, )
@@ -89,3 +109,21 @@ class CommentDetailView(APIView):
             return Response(status=HTTP_401_UNAUTHORIZED)
         comment.delete()
         return Response(status=HTTP_204_NO_CONTENT)
+
+class TagListView(APIView):
+
+    permission_classes = (IsAdminUserOrReadOnly, )
+
+    def get(self, _request):
+        tags = Tag.objects.all()
+        serial_tags = TagSerializer(tags, many=True)
+        return Response(serial_tags.data)
+
+class TagDetailView(APIView):
+
+    permission_classes = (IsAdminUserOrReadOnly, )
+
+    def get(self, _request, pk):
+        tag = Tag.objects.get(pk=pk)
+        serial_tag = TagSerializer(tag)
+        return Response(serial_tag.data)

@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const BlogCard = ({ title, subtitle, images, id }) => (
+
+const BlogCard = ({ title, subtitle, image, id }) => (
   <div className="card blogcard">
     <div className="card-image">
       <Link to={`/blogs/${id}`}>
-        <img src={images} alt={title}/>
+        <img src={image} alt={title}/>
       </Link>
     </div>
     <div className="card-header">

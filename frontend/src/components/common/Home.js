@@ -31,7 +31,8 @@ class Home extends React.Component {
     
     const opacity = Math.min(100 / this.state.currentScrollHeight  , 1)
     if (!this.state.blogs) return null
-    // console.log(this.state.blogs[0].images[0])
+    // console.log(this.state.blogs[1])
+    console.log(this.state.blogs[1].images[0].image)
     // console.log(opacity)
     return (
       <>
@@ -51,7 +52,7 @@ class Home extends React.Component {
           <div className="mainBlogIndex">
 
             {this.state.blogs.map(blog => (
-              <BlogCard key={blog.id} {...blog} />
+              <BlogCard key={blog.id} {...blog}/>
             ))}
               
 

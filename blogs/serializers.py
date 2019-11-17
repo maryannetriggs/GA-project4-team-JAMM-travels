@@ -32,7 +32,7 @@ class BlogSerializer(serializers.ModelSerializer):
     class Meta:
         model = Blog
         fields = ('id', 'title', 'subtitle', 'author', 'date_published', 'story', 'images', 'tags', 'comments')
-        extra_kwargs = {'comments': {'required': False}}
+        extra_kwargs = {'images': {'required': False}, 'comments': {'required': False}}
 
 class PopulatedBlogImageSerializer(BlogImageSerializer):
 
