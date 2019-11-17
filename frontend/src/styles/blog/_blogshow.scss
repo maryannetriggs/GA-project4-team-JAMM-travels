@@ -1,0 +1,35 @@
+.blogshow-wrapper {
+  display: flex;
+
+  .blogshow-images {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .blogshow-text {
+    width: 40%;
+  }
+}
+
+.blog-caps {
+  text-transform: uppercase;
+}
+
+.blogshow-images img {
+  // max-height: 300px;
+  max-width: 300px;
+  height: auto;
+  width: auto;
+  padding: 5px;
+}
+
+p.blogshow-tags {
+  display: inline-block;
+  border-radius: 20px;
+  border: 2px solid lightgray;
+  padding: 2px;
+  margin: 3px;
+  background: lightgray;
+}

@@ -1,5 +1,5 @@
 .stickyNavbar {
-  background-color: white;
+  background: white;
   width: 100%;
   position: fixed;
   top: 0;
@@ -16,4 +16,13 @@ span {
 
 .navbar a {
   padding: 10px;
+}
+
+a.logo-wrapper {
+  padding: 0;
+}
+
+.navbar .navbar-section a {
+  color: black;
+  text-transform: uppercase;
 }

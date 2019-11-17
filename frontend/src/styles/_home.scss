@@ -1,6 +1,5 @@
 .parallax {
   background-image: url("https://i.imgur.com/0QVWiv1.jpg");
-  background-color: black;
   margin: 0 40px;
   height: 100vh;
 
@@ -13,6 +12,22 @@
 .midParallax {
   background-color:white;
   font-size: 36px;
+  display: flex;
+  height: 200px;
+
+  h2 {
+    flex: 1;
+    align-self: center;
+    text-align: center;
+    font-family: 'Qwigley', cursive; 
+    font-size: 50px;
+  }
+
+  p {
+    flex: 1;
+    align-self: center;
+    text-align: center;
+  }
 }
 
 p {
@@ -27,7 +42,7 @@ section {
 .mainBlogIndex {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 
   div {
     margin: 20px;
@@ -46,4 +61,8 @@ section {
       width: 100px;
     }
   }
+}
+
+.homepage-section {
+  padding-top: 30px;
 }

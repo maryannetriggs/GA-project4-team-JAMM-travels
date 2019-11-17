@@ -174,22 +174,101 @@
       "tag": "Road Trip"
     }
   },
+  {
+    "model": "blogs.tag",
+    "pk": 26,
+    "fields": {
+      "tag": "City Break"
+    }
+  },
+  {
+    "model": "blogs.tag",
+    "pk": 27,
+    "fields": {
+      "tag": "Countryside"
+    }
+  },
+
 
 
 {
   "model": "blogs.blog",
   "pk": 1,
   "fields": {
+    "title": "New Yorker for a Day",
+    "subtitle": "Something in the air of NYC renders sleep utterly useless.",
+    "author": "Mary-Anne",
+    "date_published": "2019-10-06",
+    "story": "",
+    "tags": [
+      3,
+      5,
+      8,
+      13,
+      20,
+      21,
+      23,
+      26
+    ]
+  }
+},
+
+{
+  "model": "blogs.blog",
+  "pk": 2,
+  "fields": {
+    "title": "Canada/US Road Trip",
+    "subtitle": "Nothing but open road ahead.",
+    "author": "Adam",
+    "date_published": "2019-10-01",
+    "story": "",
+    "tags": [
+      3,
+      5,
+      10,
+      13,
+      18,
+      19,
+      25
+    ]
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 3,
+  "fields": {
     "title": "48 Hours in Amsterdam",
     "subtitle": "If you've never been to the 'dam place - you should!",
     "author": "Mary-Anne",
-    "date_published": "2019-11-13",
+    "date_published": "2019-08-14",
     "story": "Alllllllll the bloggy goodness",
     "tags": [
+      2,
       6,
       8,
       14,
-      20
+      20,
+      21,
+      26
+    ]
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 4,
+  "fields": {
+    "title": "Paris at Christmas",
+    "subtitle": "Paris is always a good idea.",
+    "author": "Mark",
+    "date_published": "2016-12-28",
+    "story": "",
+    "tags": [
+      4,
+      6,
+      9,
+      14,
+      20,
+      26
     ]
   }
 }

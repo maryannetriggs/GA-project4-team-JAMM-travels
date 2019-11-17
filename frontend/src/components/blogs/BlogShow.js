@@ -22,17 +22,33 @@ class BlogShow extends React.Component {
 
   render() {
     if (!this.state.blogs) return null
-    // console.log(this.state.blogs.images[0])
+    console.log(this.state.blogs.tags)
     const { blogs } = this.state
     return (
       <>
-        <h1>Blog Show Page</h1>
-        <h2>{blogs.title}</h2>
-        <div>
+      <div className="blogshow-wrapper">
+        <section className="blogshow-images">
           {blogs.images.map(image => (
-            <img key={image.id} src={image.image}/>
+            <img className="blogshow-images" key={image.id} src={'http://localhost:8000' + image.image}/>
           ))}
-        </div>
+        </section>
+
+        <hr/>
+
+        <section className="blogshow-text">
+          <h2>{blogs.title}</h2>
+          <h4>{blogs.subtitle}</h4>
+          <p className="blog-caps">Date Published: {blogs.date_published}</p>
+          <p>{blogs.story}</p>
+          <p className="blog-caps">Authored By: {blogs.author}</p>
+          <div>
+            {blogs.tags.map(tag => (
+              <p className="blogshow-tags" key={tag.id}>{tag.tag}</p>
+            ))}
+          </div>
+
+        </section>
+      </div>
       </>
     )
   }

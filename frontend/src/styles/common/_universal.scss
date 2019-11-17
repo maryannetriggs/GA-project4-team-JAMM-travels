@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  color: black;
 }
 
 body, html {
@@ -16,6 +18,7 @@ main {
   align-items: center;
 }
 
-a, a:hover {
+navbar a, navbar a:hover {
   text-decoration: none;
+  color: black;
 }

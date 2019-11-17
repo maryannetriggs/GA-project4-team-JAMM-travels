@@ -5,7 +5,7 @@ const Navbar = () => (
 
   <header className="navbar stickyNavbar">
     <section className="navbar-center">
-      <span>Team Jamm Travels</span>
+      <Link to="/" className="logo-wrapper"><span>Team jamm Travels</span></Link>
     </section>
     <section className="navbar-section">
       <Link to="/blogs">See All The Blogs</Link>
