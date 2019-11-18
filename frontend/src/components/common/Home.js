@@ -66,7 +66,7 @@ class Home extends React.Component {
 
         <section className="homepage-section">
           <div className="featuredBlogsWrapper">
-            <h3 className="centre">Featured Blogs</h3>
+            <h2 className="centre">Featured Blogs</h2>
             <div className="featuredBlogs centre">
 
               <div className="featuredBlog1">

@@ -77,6 +77,7 @@ class CommentListView(APIView):
     permission_classes = (IsAuthenticated, )
 
     def post(self, request, pk):
+        print(request.data)
         request.data['author'] = request.user.id
         request.data['blog'] = pk
         comment = CommentSerializer(data=request.data)
