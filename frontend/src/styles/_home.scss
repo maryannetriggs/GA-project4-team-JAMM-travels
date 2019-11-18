@@ -1,6 +1,6 @@
 .parallax {
   background-image: url("https://i.imgur.com/0QVWiv1.jpg");
-  margin: 0 40px;
+  margin: 20px 40px 0 40px;
   height: 100vh;
 
   background-attachment: fixed;
@@ -60,5 +60,8 @@ p {
 
 .homepage-section {
   padding-top: 30px;
+}
+
+.homepage-section-grey {
   background-color: #f1f0f0; 
 }

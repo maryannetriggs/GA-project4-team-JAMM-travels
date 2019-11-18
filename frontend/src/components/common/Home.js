@@ -42,7 +42,7 @@ class Home extends React.Component {
           <p>Team JAMM consists of Jack, Alex, Mary-Anne and Mark</p>
         </div>
 
-        <section className="homepage-section">
+        <section className="homepage-section homepage-section-grey">
           <div>
             <h2 className="centre">The Blogs</h2>
           </div>

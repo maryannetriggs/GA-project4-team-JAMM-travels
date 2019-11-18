@@ -56,17 +56,24 @@ class BlogShow extends React.Component {
       <>
       <div className="blogshow-wrapper">
         <section className="blogshow-images">
-          {blogs.images.map(image => (
-            <img className="blogshow-images" key={image.id} src={'http://localhost:8000' + image.image}/>
-          ))}
+          <div>
+            <h2>{blogs.title}</h2>
+            <p className="blog-caps">Date Published: {blogs.date_published}</p>
+          </div>
+
+          <div>
+            {blogs.images.map(image => (
+              <img className="blogshow-images" key={image.id} src={'http://localhost:8000' + image.image}/>
+            ))}
+          </div>
         </section>
 
         <hr/>
 
         <section className="blogshow-text">
-          <h2>{blogs.title}</h2>
+          
           <h4>{blogs.subtitle}</h4>
-          <p className="blog-caps">Date Published: {blogs.date_published}</p>
+          
           <p>{blogs.story}</p>
           <p className="blog-caps">Authored By: {blogs.author}</p>
           <div>

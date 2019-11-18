@@ -1,11 +1,12 @@
 .stickyNavbar {
-  background: white;
+  background-color: white;
   width: 100%;
   position: fixed;
   top: 0;
   overflow: hidden;
   z-index: 2;
-  height: 100px;
+  height: 110px;
+  border-bottom: #f1f0f0 1px solid;
 }
 
 span {
@@ -19,7 +20,7 @@ span {
 }
 
 a.logo-wrapper {
-  padding: 0;
+  padding: 0 0 0 10px;
 }
 
 .navbar .navbar-section a {
