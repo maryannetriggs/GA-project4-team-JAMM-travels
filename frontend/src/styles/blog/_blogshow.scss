@@ -1,9 +1,11 @@
 .blogshow-wrapper {
   display: flex;
+  padding: 20px;
 
   .blogshow-images {
     width: 60%;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -15,6 +17,7 @@
 
 .blog-caps {
   text-transform: uppercase;
+  color: $highlight-colour;
 }
 
 .blogshow-images img {

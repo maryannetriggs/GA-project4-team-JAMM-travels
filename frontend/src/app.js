@@ -11,6 +11,7 @@ import Footer from './components/common/Footer'
 
 import Login from './components/auth/Login'
 import Register from './components/auth/Register'
+import Profile from './components/auth/Profile'
 
 import About from './components/footerlinks/About'
 import FAQ from './components/footerlinks/FAQ'
@@ -31,6 +32,7 @@ const App = () => (
 
         <Route path="/login" component={Login}/>
         <Route path="/register" component={Register}/>
+        <Route path='/profile' component={Profile}/>
 
         <Route path="/about" component={About}/>
         <Route path="/faq" component={FAQ}/>

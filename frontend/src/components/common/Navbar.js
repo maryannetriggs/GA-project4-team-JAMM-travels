@@ -8,7 +8,8 @@ const Navbar = () => (
       <Link to="/" className="logo-wrapper"><span>Team jamm Travels</span></Link>
     </section>
     <section className="navbar-section">
-      <Link to="/blogs">See All The Blogs</Link>
+      <Link to="/blogs">+</Link>
+      <Link to="/profile">Profile</Link>
       <Link to="/login">Log In</Link>
       <Link to="/register">Register</Link>
     </section>

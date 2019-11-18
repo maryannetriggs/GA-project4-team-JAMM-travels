@@ -4,19 +4,19 @@ import { Link } from 'react-router-dom'
 
 const BlogCard = ({ title, subtitle, images, id }) => (
   <div className="card blogcard">
-    <div className="card-image">
-      <Link to={`/blogs/${id}`}>
+    <Link to={`/blogs/${id}`}>
+      <div className="card-image">
         <img src={images} alt={title}/>
-      </Link>
-    </div>
-    <div className="card-header">
-      <div className="card-title h5">{title}</div>
-      {/* <div className="card-subtitle text-gray">{subtitle}</div> */}
-    </div>
-    <div className="card-body">
-      {subtitle}
-    </div>
-    <br />
+      </div>
+      <div className="card-header">
+        <div className="card-title h5">{title}</div>
+        {/* <div className="card-subtitle text-gray">{subtitle}</div> */}
+      </div>
+      <div className="card-body">
+        {subtitle}
+      </div>
+      <br />
+    </Link>
   </div>
 )
 

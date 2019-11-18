@@ -11,7 +11,10 @@ const CommentCard = ({ comment, author, date }) => (
     <div className="card-body">
       {comment}
     </div>
-    <br />
+    <div className="card-footer">
+      <button className="btn">Edit</button>
+      <button className="btn">Delete</button>
+    </div>
   </div>
 )
 

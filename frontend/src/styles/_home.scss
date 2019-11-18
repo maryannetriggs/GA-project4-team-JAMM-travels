@@ -1,7 +1,8 @@
 .parallax {
-  background-image: url("https://i.imgur.com/0QVWiv1.jpg");
-  margin: 20px 40px 0 40px;
+  background-image: url("https://i.imgur.com/uv9iYNs.jpg");
+  margin: 10px 40px 0 40px;
   height: 100vh;
+  width: auto;
 
   background-attachment: fixed;
   background-position: center;
@@ -14,19 +15,23 @@
   font-size: 36px;
   display: flex;
   height: 200px;
+  justify-content: center;
 
   h2 {
     flex: 1;
     align-self: center;
     text-align: center;
     font-family: 'Qwigley', cursive; 
-    font-size: 50px;
+    font-size: 70px;
+    max-width: 36%;
   }
 
   p {
     flex: 1;
     align-self: center;
     text-align: center;
+    max-width: 36%;
+    font-size: 14px;
   }
 }
 
@@ -44,19 +49,17 @@ p {
   }
 }
 
-.featuredBlogs {
+.featured-blogs-wrapper {
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
-
-  div {
-    padding: 10px;
+  padding: 10px;
 
     img {
       height: 100px;
       width: 100px;
     }
   }
-}
 
 .homepage-section {
   padding-top: 30px;
@@ -64,4 +67,8 @@ p {
 
 .homepage-section-grey {
   background-color: #f1f0f0; 
+}
+
+h2 {
+  font-size: 40px;
 }

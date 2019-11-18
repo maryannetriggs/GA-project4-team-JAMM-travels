@@ -63,7 +63,7 @@ class BlogShow extends React.Component {
 
           <div>
             {blogs.images.map(image => (
-              <img className="blogshow-images" key={image.id} src={'http://localhost:8000' + image.image}/>
+              <img className="blogshow-images-column" key={image.id} src={'http://localhost:8000' + image.image}/>
             ))}
           </div>
         </section>
@@ -80,6 +80,13 @@ class BlogShow extends React.Component {
             {blogs.tags.map(tag => (
               <p className="blogshow-tags" key={tag.id}>{tag.tag}</p>
             ))}
+          </div>
+
+          <br/>
+
+          <div>
+            <button>Edit Blog</button>
+            <button>Delete Blog</button>
           </div>
 
         </section>
