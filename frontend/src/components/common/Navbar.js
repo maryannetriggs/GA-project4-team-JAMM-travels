@@ -9,7 +9,7 @@ const Navbar = () => (
     </section>
     <section className="navbar-section">
       <Link to="/blogs/new">+</Link>
-      <Link to="/profile">Profile</Link>
+      {/* <Link to="/profile">Profile</Link> */}
       <Link to="/login">Log In</Link>
       <Link to="/register">Register</Link>
     </section>

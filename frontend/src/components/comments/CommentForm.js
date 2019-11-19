@@ -1,11 +1,12 @@
 import React from 'react'
 
 const CommentForm = ({ commentFormData, handleChange, handleSubmit }) => (
-  <div className="card Commentcard">
+  <div className="card comment-card">
     <form onSubmit={handleSubmit}>
       <div className="card-body">
-        <label>Please leave us a comment</label>
+        <label>PLEASE LEAVE US A COMMENT</label>
         <input
+          className="form-input"
           name="comment"
           value={commentFormData.comment}
           onChange={handleChange}

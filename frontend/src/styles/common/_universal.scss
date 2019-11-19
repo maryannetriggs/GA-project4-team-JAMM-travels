@@ -29,5 +29,16 @@ a:visited {
 }
 
 .btn, button {
+  background: #739DD3;
+  color: white;
+  border-color: $highlight-colour;
+}
 
+.btn:hover, .button:hover {
+  background: $highlight-colour;
+}
+
+input.form-input {
+  border: none;
+  border-bottom: #739DD3 2px solid;
 }

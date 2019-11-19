@@ -196,7 +196,7 @@
   "pk": 1,
   "fields": {
     "title": "New Yorker for a Day",
-    "subtitle": "Something in the air of NYC renders sleep utterly useless.",
+    "subtitle": "Something in the air of NYC renders sleep utterly useless",
     "author": "Mary-Anne",
     "date_published": "2019-10-06",
     "story": "",
@@ -218,7 +218,7 @@
   "pk": 2,
   "fields": {
     "title": "Canada/US Road Trip",
-    "subtitle": "Nothing but open road ahead.",
+    "subtitle": "Nothing but open road ahead",
     "author": "Adam",
     "date_published": "2019-10-01",
     "story": "",
@@ -258,7 +258,7 @@
   "pk": 4,
   "fields": {
     "title": "Paris at Christmas",
-    "subtitle": "Paris is always a good idea.",
+    "subtitle": "Paris is always a good idea",
     "author": "Mark",
     "date_published": "2016-12-28",
     "story": "",

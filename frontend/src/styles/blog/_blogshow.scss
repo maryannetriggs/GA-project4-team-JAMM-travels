@@ -1,6 +1,6 @@
 .blogshow-wrapper {
   display: flex;
-  padding: 20px;
+  padding-top: 20px;
 
   .blogshow-images {
     width: 60%;
@@ -8,9 +8,11 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 0 20px;
   }
 
   .blogshow-text {
+    padding: 0 20px;
     width: 40%;
   }
 }
@@ -18,21 +20,29 @@
 .blog-caps {
   text-transform: uppercase;
   color: $highlight-colour;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.blog-story {
+  font-size: 16px;
 }
 
 .blogshow-images img {
-  // max-height: 300px;
-  max-width: 300px;
+  width: 50%;
   height: auto;
-  width: auto;
   padding: 5px;
 }
 
 p.blogshow-tags {
   display: inline-block;
   border-radius: 20px;
-  border: 2px solid lightgray;
+  border: 4px solid #f1f0f0;
   padding: 2px;
   margin: 3px;
-  background: lightgray;
+  background: #f1f0f0;
+}
+
+.vertical-line {
+  border-left: 2px solid #f1f0f0 ;
 }

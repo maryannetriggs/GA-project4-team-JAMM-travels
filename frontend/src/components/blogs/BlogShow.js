@@ -69,13 +69,13 @@ class BlogShow extends React.Component {
           </div>
         </section>
 
-        <hr/>
+        <div className="vertical-line"></div>
 
         <section className="blogshow-text">
           
-          <h4>{blogs.subtitle}</h4>
+          <h3>{blogs.subtitle}</h3>
           
-          <p>{blogs.story}</p>
+          <p className="blog-story">{blogs.story}</p>
           <p className="blog-caps">Authored By: {blogs.author}</p>
           <div>
             {blogs.tags.map(tag => (

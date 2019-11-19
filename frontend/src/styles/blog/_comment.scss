@@ -1,0 +1,22 @@
+.blogshow-comments {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: row;
+}
+
+div.card.comment-card {
+  width: 20%;
+}
+
+.comment-card-p {
+  margin: 5px 0;
+}
+
+.card-comment-buttons {
+  display: flex;
+  justify-content: center;
+
+    button {
+      margin: 0 5px;
+  }
+}
