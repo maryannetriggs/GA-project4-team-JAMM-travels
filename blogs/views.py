@@ -24,6 +24,7 @@ class BlogListView(APIView):
         return Response(serialized_blogs.data)
 
     def post(self, request):
+        print(request.data)
         blog = BlogSerializer(data=request.data)
         if blog.is_valid():
             blog.save()

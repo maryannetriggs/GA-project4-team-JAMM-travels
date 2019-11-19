@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Register = () => (
-  <section>
+  <section className="register-page">
     <h2 className="centre">Register</h2>
     <form className="centre">
       <div className="formBackground form-group">
@@ -56,7 +56,7 @@ const Register = () => (
             placeholder="Password Confirmation"
           />
           <br />
-          <button className="btn" type="submit">Register</button>
+          <button className="btn btn-group-block" type="submit">Register</button>
           <br />
         </div>
         <small>Already have an account? <Link to="/login">Log In</Link></small>

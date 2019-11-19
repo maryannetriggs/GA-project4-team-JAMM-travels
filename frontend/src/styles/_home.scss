@@ -1,7 +1,7 @@
 .parallax {
   background-image: url("https://i.imgur.com/uv9iYNs.jpg");
-  margin: 10px 40px 0 40px;
-  height: 100vh;
+  margin: 10px 100px 0 100px;
+  height: 90vh;
   width: auto;
 
   background-attachment: fixed;
@@ -54,6 +54,7 @@ p {
   flex-direction: row;
   justify-content: space-around;
   padding: 10px;
+  margin: 20px 0;
 
     img {
       height: 100px;

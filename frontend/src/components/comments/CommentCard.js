@@ -4,7 +4,8 @@ const CommentCard = ({ comment, author, date }) => (
   <div className="card Commentcard">
     <div className="card-header">
       <div className="card-title h5">
-        {author}
+        {author.username}
+        <br/>
         {date}
       </div>
     </div>

@@ -17,7 +17,8 @@ import About from './components/footerlinks/About'
 import FAQ from './components/footerlinks/FAQ'
 import Contact from './components/footerlinks/Contact'
 
-import BlogsIndex from './components/blogs/BlogsIndex'
+import BlogAdd from './components/blogs/BlogAdd'
+import BlogEdit from './components/blogs/BlogEdit'
 import BlogShow from './components/blogs/BlogShow'
 
 const App = () => (
@@ -27,8 +28,9 @@ const App = () => (
       <Switch>
         <Route exact path="/" component={Home}/>
 
+        <Route path="/blogs/:id/edit" component={BlogEdit}/>
+        <Route path="/blogs/new" component={BlogAdd}/>
         <Route path="/blogs/:id" component={BlogShow}/>
-        <Route path="/blogs" component={BlogsIndex}/>
 
         <Route path="/login" component={Login}/>
         <Route path="/register" component={Register}/>

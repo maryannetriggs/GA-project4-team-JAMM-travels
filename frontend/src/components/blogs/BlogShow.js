@@ -1,5 +1,7 @@
 import React from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
+
 // import Auth from '../../lib/auth'
 
 import CommentCard from '../comments/CommentCard'
@@ -34,8 +36,7 @@ class BlogShow extends React.Component {
     axios.post(`/api/blogs/${blogId}/comments/`, this.state.commentFormData , {
       headers: { Authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjJ9.Iwn581UGM4D23SnUyTkbeiX57TVdjr9zy9mBQ1ZZIc4' }
     })
-      .then(console.log('submitted'))
-      .then(() => this.props.history.push(`/api/blogs/${blogId}`))
+      .then(() => location.reload())
       .catch(err => this.setState({ errors: err.response.data.errors  }))
   }
 
@@ -85,8 +86,9 @@ class BlogShow extends React.Component {
           <br/>
 
           <div>
-            <button>Edit Blog</button>
-            <button>Delete Blog</button>
+            <Link to={`/blogs/${blogs.id}/edit`}>
+              <button className="btn">Edit Blog</button>
+            </Link>
           </div>
 
         </section>
@@ -99,7 +101,7 @@ class BlogShow extends React.Component {
           handleSubmit={this.handleSubmit}
         />
         {blogs.comments.map(comment => (
-          <CommentCard key={comment.id}/>
+          <CommentCard key={comment.id} {...comment}/>
         ))}        
       </div>
 

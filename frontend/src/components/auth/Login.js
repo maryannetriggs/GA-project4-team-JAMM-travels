@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Login = () => (
-  <section>
+  <section className="login-page">
     <h2 className="centre">Log In</h2>
     <form className="centre">
       <div className="formBackground form-group">
@@ -28,7 +28,7 @@ const Login = () => (
           <br />
         </div>
         <br />
-        <small>Don't have an account yet? <Link to="/register">Register</Link></small>
+        <small>Don't have an account yet? <Link className="login-register-link" to="/register">Register</Link></small>
       </div>
     </form>
   </section>

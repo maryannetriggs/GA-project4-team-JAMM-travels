@@ -31,7 +31,7 @@ class Home extends React.Component {
 
     const opacity = Math.min(100 / this.state.currentScrollHeight, 1)
     if (!this.state.blogs) return null
-    console.log(this.state.blogs)
+    // console.log(this.state.blogs)
     // console.log(this.state.blogs[1].images[0].image)
     // console.log(opacity)
     return (
@@ -39,7 +39,7 @@ class Home extends React.Component {
         <div style={{ opacity }} className="parallax"></div>
         <div className="midParallax">
           <h2>About Team jamm</h2>
-          <p>Team JAMM consists of Jack, Alex, Mary-Anne and Mark. Follow our family (and occassionally Uncle Adam) on our adventures travelling the globe</p>
+          <p>Team JAMM consists of Jack, Alex, Mary-Anne and Mark. Follow our family (and occassionally Uncle Adam) on our adventures travelling and exploring this beautiful planet</p>
         </div>
 
         <section className="homepage-section homepage-section-grey">
@@ -49,7 +49,7 @@ class Home extends React.Component {
           <div className="mainBlogIndex">
 
             {this.state.blogs.map(blog => (
-              <BlogCard key={blog.id} {...blog}/>
+              <BlogCard key={blog.id} { ...blog } />
             ))}
 
           </div>
