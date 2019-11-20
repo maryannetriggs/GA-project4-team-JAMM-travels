@@ -8,12 +8,11 @@ class Register extends React.Component {
 
     this.state = {
       registerFormData: {
-        name: '',
+        username: '',
         email: '',
         password: '',
         password_confirmation: '',
-        contry_of_residence: '',
-        profile_image: ''
+        country_of_residence: ''
       },
       errors: ''
     }
@@ -47,26 +46,17 @@ class Register extends React.Component {
               <input
                 className="form-input"
                 type="text"
-                id="name"
-                name="name"
+                id="username"
+                name="username"
                 placeholder="Name"
-                onChange={this.handleChange}
-              />
-              <label className="form-label">Profile Picture</label>
-              <input
-                className="form-input"
-                type="text"
-                id="profilePicture"
-                name="profilePicture"
-                placeholder="Profile Picture (URL)"
                 onChange={this.handleChange}
               />
               <label className="form-label">Country of Residence</label>
               <input
                 className="form-input"
                 type="text"
-                id="country"
-                name="country"
+                id="country_of_residence"
+                name="country_of_residence"
                 placeholder="Country of Residence"
                 onChange={this.handleChange}
               />
@@ -92,8 +82,8 @@ class Register extends React.Component {
               <input
                 className="form-input"
                 type="password"
-                id="passwordConfirmation"
-                name="passwordConfirmation"
+                id="password_confirmation"
+                name="password_confirmation"
                 placeholder="Password Confirmation"
                 onChange={this.handleChange}
               />
@@ -101,7 +91,7 @@ class Register extends React.Component {
               <button className="btn btn-group-block" type="submit">Register</button>
               <br />
             </div>
-            <small>Already have an account? <Link className="login-register-link" to="/login">Log In</Link></small>
+            <small>Already have an account?  <Link className="login-register-link" to="/login">Log In</Link></small>
           </div>
         </form>
       </section>

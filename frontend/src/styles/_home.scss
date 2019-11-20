@@ -70,6 +70,16 @@ p {
   background-color: #f1f0f0; 
 }
 
-h2 {
-  font-size: 40px;
+.featured-blogs {
+  display: flex;
+  flex-direction: column;
+  
+  img {
+    align-self: center;
+  }
+
+  h6 {
+    margin-top: 5px;
+    align-self: center;
+  }
 }

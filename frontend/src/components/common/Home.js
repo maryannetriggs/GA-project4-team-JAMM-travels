@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 import BlogCard from '../blogs/BlogCard'
 
@@ -28,11 +29,10 @@ class Home extends React.Component {
   }
 
   render() {
-
+    const { blogs } = this.state
     const opacity = Math.min(100 / this.state.currentScrollHeight, 1)
-    if (!this.state.blogs) return null
-    // console.log(this.state.blogs)
-    // console.log(this.state.blogs[1].images[0].image)
+    if (!blogs) return null
+    // console.log(blogs)
     // console.log(opacity)
     return (
       <>
@@ -48,8 +48,8 @@ class Home extends React.Component {
           </div>
           <div className="mainBlogIndex">
 
-            {this.state.blogs.map(blog => (
-              <BlogCard key={blog.id} { ...blog } />
+            {blogs.map(blog => (
+              <BlogCard key={blog.id} {...blog} />
             ))}
 
           </div>
@@ -65,22 +65,28 @@ class Home extends React.Component {
         </section>
 
         <section className="homepage-section">
-          <div className="featured-blogs-wrapper">
-
-            {this.state.blogs.map(blog => (
-              <div key={blog.title}>
-                <img src={blog.images.image} alt={blog.title}></img>
-                <h5 className="centre">{blog.title}</h5>
-              </div>
-            ))}
-
+          <div>
+            <h2 className="centre">Featured Blogs</h2>
           </div>
-          
+          <div className="featured-blogs-wrapper">
+            {blogs.slice(0, 4).map(blog => (
+              <Link to={`/blogs/${blog.id}`}  key={blog.title}>
+                {blog.images.length > 0 ?
+                  <div className="featured-blogs">
+                    <img src={'http://localhost:8000' + blog.images[0].image} alt={blog.title}></img>
+                    <h6 className="centre">{blog.title}</h6>
+                  </div>
+                  : ''}
+              </Link>
+            ))}
+          </div>
+
         </section>
       </>
     )
   }
 
 }
+
 
 export default Home

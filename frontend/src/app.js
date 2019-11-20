@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, SecureRoute } from 'react-router-dom'
 
 import 'spectre.css'
 import './styles/style.scss'

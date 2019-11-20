@@ -16,7 +16,12 @@ span {
 }
 
 .navbar a {
-  padding: 10px;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.navbar a:last-of-type {
+  padding-right: 20px;
 }
 
 a.logo-wrapper {

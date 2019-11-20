@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CommentCard = ({ comment, author, date }) => (
+const CommentCard = ({ id, comment, author, date, handleDelete }) => (
   <div className="card comment-card">
     <div className="card-header">
       <div className="card-title h5">
@@ -13,8 +13,7 @@ const CommentCard = ({ comment, author, date }) => (
       {comment}
     </div>
     <div className="card-footer card-comment-buttons">
-      <button className="btn">Edit</button>
-      <button className="btn">Delete</button>
+      <button className="btn" name="commentId" value={id} onClick={handleDelete}>Delete</button>
     </div>
   </div>
 )

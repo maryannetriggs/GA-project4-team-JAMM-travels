@@ -29,7 +29,7 @@ module.exports = {
     historyApiFallback: true,
     proxy: {
       '/api': {
-        target: 'http://localhost:8000',
+        target: 'http://localhost:8000/api',
         secure: false
       }
     }
@@ -39,7 +39,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       filename: 'index.html',
-      inject: 'body'
+      inject: 'body',
+      favicon: 'frontend/src/favicon_io'
     })
   ]
 }

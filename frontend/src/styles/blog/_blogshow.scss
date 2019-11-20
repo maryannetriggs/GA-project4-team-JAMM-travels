@@ -1,6 +1,6 @@
 .blogshow-wrapper {
   display: flex;
-  padding-top: 20px;
+  padding-top: 30px;
 
   .blogshow-images {
     width: 60%;
@@ -17,6 +17,10 @@
   }
 }
 
+.blogshow-title {
+  width: 80%;
+}
+
 .blog-caps {
   text-transform: uppercase;
   color: $highlight-colour;
@@ -29,9 +33,10 @@
 }
 
 .blogshow-images img {
-  width: 50%;
+  width: 80%;
   height: auto;
   padding: 5px;
+  overflow: hidden;
 }
 
 p.blogshow-tags {
@@ -45,4 +50,8 @@ p.blogshow-tags {
 
 .vertical-line {
   border-left: 2px solid #f1f0f0 ;
+}
+
+.blogshow-comments {
+  padding: 20px;
 }
