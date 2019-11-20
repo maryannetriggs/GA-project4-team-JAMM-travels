@@ -18,7 +18,7 @@ class Blog(models.Model):
     subtitle = models.CharField(max_length=200)
     author = models.CharField(max_length=100)
     date_published = models.DateField(auto_now=False)
-    story = models.CharField(max_length=10000)
+    story = models.TextField(max_length=10000)
     tags = models.ManyToManyField(
         Tag,
         related_name='blogs'
