@@ -32,9 +32,13 @@
   font-size: 16px;
 }
 
+.blogshow-image-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .blogshow-images img {
-  width: 80%;
-  height: auto;
+  height: 400px;
   padding: 5px;
   overflow: hidden;
 }
