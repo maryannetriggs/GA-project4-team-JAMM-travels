@@ -7,7 +7,8 @@ const BlogCard = ({ title, subtitle, images, id }) => (
     <Link to={`/blogs/${id}`}>
       {images.length > 0 ?
         <div className="card-image">
-          <img src={'http://localhost:8000' + images[0].image} alt={title}/>
+          {/* <img src={'http://localhost:8000' + images[0].image} alt={title}/> */}
+          <img src={images[0].image} alt={title}/>
         </div>
         : ''}
     

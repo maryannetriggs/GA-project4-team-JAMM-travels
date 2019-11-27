@@ -7,7 +7,7 @@ module.exports = {
   context: path.resolve(__dirname, 'frontend'),
   output: {
     filename: 'bundle.js',
-    path: path.resolve('dist'),
+    path: path.resolve('frontend/dist'),
     publicPath: '/'
   },
   devtool: 'source-maps',
@@ -29,7 +29,7 @@ module.exports = {
     historyApiFallback: true,
     proxy: {
       '/api': {
-        target: 'http://localhost:8000/api',
+        target: 'http://localhost:8000',
         secure: false
       }
     }

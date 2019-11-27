@@ -71,7 +71,8 @@ class BlogShow extends React.Component {
 
           <div className="blowshow-image-wrapper centre">
             {blogs.images.map(image => (
-              <img className="blogshow-images-column" key={image.id} src={'http://localhost:8000' + image.image}/>
+              // <img className="blogshow-images-column" key={image.id} src={'http://localhost:8000' + image.image}/>
+              <img className="blogshow-images-column" key={image.id} src={image.image}/>
             ))}
           </div>
         </section>

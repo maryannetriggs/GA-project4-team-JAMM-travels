@@ -73,7 +73,8 @@ class Home extends React.Component {
               <Link to={`/blogs/${blog.id}`}  key={blog.title}>
                 {blog.images.length > 0 ?
                   <div className="featured-blogs">
-                    <img src={'http://localhost:8000' + blog.images[0].image} alt={blog.title}></img>
+                    {/* <img src={'http://localhost:8000' + blog.images[0].image} alt={blog.title}></img> */}
+                    <img src={blog.images[0].image} alt={blog.title}></img>
                     <h6 className="centre">{blog.title}</h6>
                   </div>
                   : ''}
