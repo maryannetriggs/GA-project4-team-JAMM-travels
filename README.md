@@ -55,12 +55,33 @@ $ yarn start
 ---
 
 ## Challenges
+
+The challenges associated with this project were:
+
+*
+*
+*
+
 ---
 
 ## Wins
+
+The wins associated with this project were:
+
+*
+*
+*
+
 ---
 
 ## Key Learning Points
+
+The key learning points associated with this project were:
+
+*
+*
+*
+
 ---
 
 ## Future Improvements
