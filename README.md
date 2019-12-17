@@ -1,7 +1,8 @@
 ![ga_cog_large_red_rgb](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png)
 
 # GA Project 4 - Team JAMM Travels
-Family Travel Blog by Mary-Anne Triggs
+
+Team JAMM travels is Family Travel Blog, inspired by my desire to document my families travels. Team JAMM is a nickname we've developed for ourselves based on the first letters of each of our names.
 
 ## Built With
 
@@ -43,6 +44,10 @@ $ yarn start
 ---
 
 ## User Experience
+
+The first thing you see on the homepage is a clean, uncrowded navigation bar and a large family photograph. Upon scrolling down the inital image fades out as 
+
+![readme-two](images-and-blogs/images/homepage.png)
 
 ---
 
